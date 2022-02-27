@@ -1,0 +1,57 @@
+plugins {
+    id 'java-library'
+    id 'org.jetbrains.kotlin.jvm'
+    id 'org.jetbrains.kotlin.plugin.serialization'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+dependencies {
+    def ktorVersion = "1.6.7"
+    implementation project(":domain")
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation "io.ktor:ktor-client-android:$ktorVersion"
+    implementation "io.ktor:ktor-client-serialization:$ktorVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0"
+    implementation "io.ktor:ktor-client-logging-jvm:$ktorVersion"
+    implementation "io.insert-koin:koin-core:$koin_version"
+}
+
+def generatedVersionDir = "$buildDir/generated-version"
+
+sourceSets {
+    main {
+        kotlin {
+            output.dir(generatedVersionDir)
+        }
+    }
+}
+
+static def getApiProperties() {
+    def filename = "api_keys.properties"
+    def file = new File(filename)
+    Properties properties = new Properties()
+    properties.load(new FileInputStream(file))
+    return properties
+}
+
+tasks.register("generateVersionProperties") {
+    doLast {
+        def propertiesFile = new File("$generatedVersionDir/secrets.properties")
+        propertiesFile.parentFile.mkdirs()
+        def properties = new Properties()
+        def Properties apiProperties = getApiProperties()
+        apiProperties.entrySet().forEach {
+            properties.setProperty(it.key, it.value)
+        }
+        def out = new FileOutputStream(propertiesFile)
+        properties.store(out, "")
+    }
+}
+
+tasks.named("processResources") {
+    dependsOn("generateVersionProperties")
+}

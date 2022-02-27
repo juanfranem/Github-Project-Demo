@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/searchUserFragment"
+    android:id="@+id/nav_graph.xml">
+
+    <fragment
+        tools:layout="@layout/fragment_search_user"
+        android:id="@+id/searchUserFragment"
+        android:name="es.jfechevarria.application.ui.SearchUserFragment"
+        android:label="@string/search_user"/>
+
+</navigation>
