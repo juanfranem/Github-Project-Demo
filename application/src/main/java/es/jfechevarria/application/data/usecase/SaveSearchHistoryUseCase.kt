@@ -1,18 +1,17 @@
-package es.jfechevarria.application.usecase
+package es.jfechevarria.application.data.usecase
 
-import androidx.lifecycle.ViewModel
 import es.jfechevarria.application.core.BaseUseCase
 import es.jfechevarria.domain.Result
 import es.jfechevarria.domain.searchHistory.repository.SearchHistoryRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
-class DeleteSearchHistoryUseCase(
+class SaveSearchHistoryUseCase(
     private val historyRepository: SearchHistoryRepository
-): BaseUseCase<Unit, Unit>() {
-    override fun execute(parameters: Unit): Flow<Result<Unit>> = flow {
+): BaseUseCase<String, Unit>() {
+    override fun execute(parameters: String): Flow<Result<Unit>> = flow {
         emit(Result.Loading)
-        historyRepository.deleteAllSearch()
+        historyRepository.saveQuery(parameters)
         emit(Result.Success(Unit))
     }
 }

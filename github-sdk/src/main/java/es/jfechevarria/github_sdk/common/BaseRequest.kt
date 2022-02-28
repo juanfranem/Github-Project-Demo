@@ -17,7 +17,7 @@ internal abstract class BaseRequest<T: BaseResponse> {
     open val pagination: BasePagination = BasePagination()
 
 
-    suspend inline fun <reified T: BaseResponse> execute(): T {
+    suspend inline fun <reified T> execute(): T {
         return client.get<T>(path) {
             params.forEach { (s, any) ->
                 this.parameter(s, any)

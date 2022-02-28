@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_margin="@dimen/margin_general"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="@dimen/margin_general"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:ellipsize="end"
+            android:id="@+id/name"
+            tools:text="Title of the repo"
+            style="@style/TextHead2"
+            android:lines="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/privateLogo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/privateLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_private"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:ellipsize="end"
+            tools:text="Lorem ipsum ergo sum,Lorem ipsum ergo sum,Lorem ipsum ergo sum,Lorem ipsum ergo sum,Lorem ipsum ergo sum,Lorem ipsum ergo sum,Lorem ipsum ergo sum,Lorem ipsum ergo sum,"
+            android:maxLines="3"
+            android:layout_marginTop="@dimen/margin_low"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            style="@style/TextDescription"
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_marginTop="@dimen/margin_general"
+            app:layout_constraintTop_toBottomOf="@id/description"
+            android:alpha="0.3"
+            android:background="@color/black"
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_general"
+            app:layout_constraintTop_toBottomOf="@id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextTag.Bold"
+                android:text="@string/writen_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                tools:text="Java"
+                android:layout_marginStart="@dimen/margin_low"
+                android:id="@+id/language"
+                style="@style/TextTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_marginEnd="@dimen/margin_low"
+                android:layout_marginStart="@dimen/margin_low"
+                android:alpha="0.3"
+                android:background="@color/black"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                style="@style/TextTag.Bold"
+                android:text="@string/forked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textAlignment="center"
+                android:id="@+id/forked"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/white"
+                tools:text="0"
+                android:textSize="10sp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:layout_marginStart="@dimen/margin_low"
+                android:background="@drawable/oval_forked"
+                android:layout_width="14dp"
+                android:layout_height="14dp"/>
+
+            <View
+                android:layout_marginEnd="@dimen/margin_low"
+                android:layout_marginStart="@dimen/margin_low"
+                android:alpha="0.3"
+                android:background="@color/black"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                style="@style/TextTag.Bold"
+                android:text="@string/updated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                tools:text="Java"
+                android:layout_marginStart="@dimen/margin_low"
+                android:id="@+id/updated"
+                style="@style/TextTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

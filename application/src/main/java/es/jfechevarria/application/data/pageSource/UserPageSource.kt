@@ -1,20 +1,12 @@
-package es.jfechevarria.application.pageSource
+package es.jfechevarria.application.data.pageSource
 
 import es.jfechevarria.application.core.BasePagingSource
-import es.jfechevarria.application.usecase.SearchUserByQueryUseCase
+import es.jfechevarria.application.data.usecase.SearchUserByQueryUseCase
 import es.jfechevarria.domain.Result
 import es.jfechevarria.domain.user.User
 import es.jfechevarria.domain.user.repository.UserRequest
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.suspendCancellableCoroutine
 import java.lang.Exception
-import kotlin.coroutines.resume
-import kotlin.coroutines.resumeWithException
-import kotlin.coroutines.suspendCoroutine
 
 class UserPageSource(
     private val searchUserByQueryUseCase: SearchUserByQueryUseCase,

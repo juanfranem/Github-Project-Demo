@@ -2,4 +2,17 @@
     <string name="app_name">application</string>
     <string name="search_user">Search user</string>
     <string name="search_user_text">Search user by his username</string>
+    <string name="latest_search">Latest searches:</string>
+    <string name="results_for">Results for %s:</string>
+    <string name="list_repositories">List repositories</string>
+    <string name="go_to_user_profile">Visit profile</string>
+    <string name="writen_in">Written in:</string>
+    <string name="forked">Forked:</string>
+    <string name="updated">Updated:</string>
+    <string name="not_available">Not available</string>
+    <string name="undefined">Undefined</string>
+    <string name="action_selection">Please, select an action</string>
+    <string name="open_user_url">Open user page</string>
+    <string name="open_project_url">Open project page</string>
+    <string name="cancel">Cancel</string>
 </resources>

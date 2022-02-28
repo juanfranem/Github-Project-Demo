@@ -2,6 +2,10 @@
 <resources>
     <dimen name="space_medium">18dp</dimen>
     <dimen name="text_size_medium">22sp</dimen>
+    <dimen name="text_size_little">18sp</dimen>
+    <dimen name="text_size_tag">11sp</dimen>
+    <dimen name="text_size_low">16sp</dimen>
     <dimen name="margin_general">8dp</dimen>
+    <dimen name="margin_low">4dp</dimen>
 
 </resources>

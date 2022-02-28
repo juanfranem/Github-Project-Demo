@@ -1,13 +1,12 @@
-package es.jfechevarria.application.viewmodels
+package es.jfechevarria.application.data.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import es.jfechevarria.application.core.BaseViewModel
-import es.jfechevarria.application.usecase.DeleteSearchHistoryUseCase
-import es.jfechevarria.application.usecase.GetSearchHistoryUseCase
-import es.jfechevarria.application.usecase.SaveSearchHistoryUseCase
+import es.jfechevarria.application.data.usecase.DeleteSearchHistoryUseCase
+import es.jfechevarria.application.data.usecase.GetSearchHistoryUseCase
+import es.jfechevarria.application.data.usecase.SaveSearchHistoryUseCase
 import es.jfechevarria.domain.Result
 import es.jfechevarria.domain.searchHistory.SearchHistory
 import kotlinx.coroutines.flow.collect
