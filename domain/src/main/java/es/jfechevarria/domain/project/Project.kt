@@ -6,10 +6,10 @@ data class Project(
     val name: String,
     val private: Boolean,
     val externalUrl: String,
-    val description: String,
+    val description: String?,
     val forked: Boolean,
-    val forksCount: Int,
+    val forksCount: Int = 0,
     val createdDate: String,
     val updatedDate: String,
-    val language: String,
+    val language: String?,
 ): DomainValueObject()

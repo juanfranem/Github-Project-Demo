@@ -1,10 +1,7 @@
-package es.jfechevarria.application.usecase
+package es.jfechevarria.application.data.usecase
 
 import es.jfechevarria.application.core.BaseUseCase
 import es.jfechevarria.domain.Result
-import es.jfechevarria.domain.project.Project
-import es.jfechevarria.domain.project.repository.ProjectRepository
-import es.jfechevarria.domain.project.repository.ProjectRequest
 import es.jfechevarria.domain.user.User
 import es.jfechevarria.domain.user.repository.UserRepository
 import es.jfechevarria.domain.user.repository.UserRequest

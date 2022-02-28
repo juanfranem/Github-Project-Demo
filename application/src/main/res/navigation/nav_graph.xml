@@ -9,6 +9,23 @@
         tools:layout="@layout/fragment_search_user"
         android:id="@+id/searchUserFragment"
         android:name="es.jfechevarria.application.ui.SearchUserFragment"
-        android:label="@string/search_user"/>
+        android:label="@string/search_user">
+
+        <action
+            android:id="@+id/action_search_to_list_repositories"
+            app:destination="@id/listRepositoriesFragment"
+            app:popUpTo="@layout/fragment_search_user" />
+
+    </fragment>
+
+    <fragment
+        tools:layout="@layout/fragment_list_repositories"
+        android:id="@+id/listRepositoriesFragment"
+        android:name="es.jfechevarria.application.ui.ListRepositoriesFragment"
+        android:label="@string/list_repositories">
+        <argument
+            android:name="user"
+            app:argType="es.jfechevarria.domain.user.User" />
+    </fragment>
 
 </navigation>

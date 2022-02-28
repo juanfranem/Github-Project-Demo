@@ -20,7 +20,7 @@ internal class SearchUsersDataSourceImpl(
             User(
                 image = it.avatar_url,
                 userName = it.login,
-                externalUrl = it.url
+                externalUrl = it.html_url
             )
         }
     }

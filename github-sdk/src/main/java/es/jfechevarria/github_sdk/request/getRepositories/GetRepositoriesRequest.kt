@@ -8,5 +8,8 @@ import es.jfechevarria.github_sdk.response.getRepositories.GithubRepo
 
 internal class GetRepositoriesRequest(): BaseRequest<BaseResponseList<GithubRepo>>() {
     var userName: String = ""
-    override val path: String = PATH.format(userName)
+    override val path: String
+        get() {
+            return PATH.format(userName)
+        }
 }

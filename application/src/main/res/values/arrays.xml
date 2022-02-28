@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="selection_actions_array">
+        <item>@string/open_user_url</item>
+        <item>@string/open_project_url</item>
+        <item>@string/cancel</item>
+    </string-array>
+
+</resources>

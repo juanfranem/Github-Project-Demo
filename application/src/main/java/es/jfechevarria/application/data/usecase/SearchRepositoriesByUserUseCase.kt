@@ -1,12 +1,10 @@
-package es.jfechevarria.application.usecase
+package es.jfechevarria.application.data.usecase
 
 import es.jfechevarria.application.core.BaseUseCase
 import es.jfechevarria.domain.Result
 import es.jfechevarria.domain.project.Project
 import es.jfechevarria.domain.project.repository.ProjectRepository
 import es.jfechevarria.domain.project.repository.ProjectRequest
-import es.jfechevarria.domain.searchHistory.SearchHistory
-import es.jfechevarria.domain.searchHistory.repository.SearchHistoryRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 

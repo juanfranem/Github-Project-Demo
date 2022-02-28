@@ -1,6 +1,6 @@
 package es.jfechevarria.application.di
 
-import es.jfechevarria.application.usecase.*
+import es.jfechevarria.application.data.usecase.*
 import org.koin.dsl.module
 
 val usecaseModule = module {

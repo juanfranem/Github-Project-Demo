@@ -1,4 +1,6 @@
 package es.jfechevarria.domain.common
 
-open class DomainValueObject {
+import java.io.Serializable
+
+open class DomainValueObject: Serializable {
 }
